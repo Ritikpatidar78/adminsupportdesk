@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const getallprofileservice = async (token)=>{
-    const response = await axios.get("/api/admin/profile",{
+    const response = await axios.get("https://supportdeskbackend-o50j.onrender.com/api/admin/profile",{
         headers: {
           'Authorization': 'Bearer ' + token 
         }
@@ -9,7 +9,7 @@ const getallprofileservice = async (token)=>{
    return response.data
 }
 const getallticketsservice = async (token)=>{
-    const response = await axios.get("/api/admin",{
+    const response = await axios.get("https://supportdeskbackend-o50j.onrender.com/api/admin",{
         headers: {
           'Authorization': 'Bearer ' + token 
         }
@@ -17,7 +17,7 @@ const getallticketsservice = async (token)=>{
    return response.data
 }
 const getallnotesservice = async (id,token)=>{
-    const response = await axios.get(`/api/admin/note/${id}`,{
+    const response = await axios.get(`https://supportdeskbackend-o50j.onrender.com/api/admin/note/${id}`,{
         headers: {
           'Authorization': 'Bearer ' + token 
         }
@@ -25,7 +25,7 @@ const getallnotesservice = async (id,token)=>{
    return response.data
 }
 const getprofileticketservice = async (id,token)=>{
-    const response = await axios.get(`/api/admin/ticket/${id}`,{
+    const response = await axios.get(`https://supportdeskbackend-o50j.onrender.com/api/admin/ticket/${id}`,{
         headers: {
           'Authorization': 'Bearer ' + token 
         }
@@ -33,7 +33,7 @@ const getprofileticketservice = async (id,token)=>{
    return response.data
 }
 const createnoteservice = async (formdata,token)=>{
-    const response = await axios.post("/api/admin",formdata,{
+    const response = await axios.post("https://supportdeskbackend-o50j.onrender.com/api/admin",formdata,{
         headers: {
           'Authorization': 'Bearer ' + token 
         }
@@ -41,7 +41,7 @@ const createnoteservice = async (formdata,token)=>{
    return response.data
 }
 const updateticketservice = async (formdata,token)=>{
-    const response = await axios.put(`/api/admin/${formdata._id}`,formdata,{
+    const response = await axios.put(`https://supportdeskbackend-o50j.onrender.com/api/admin/${formdata._id}`,formdata,{
         headers: {
           'Authorization': 'Bearer ' + token 
         }
@@ -49,7 +49,7 @@ const updateticketservice = async (formdata,token)=>{
    return response.data
 }
 const deleteticketservice = async (id,token)=>{
-    const response = await axios.delete(`/api/admin/${id}`,{
+    const response = await axios.delete(`https://supportdeskbackend-o50j.onrender.com/api/admin/${id}`,{
         headers: {
           'Authorization': 'Bearer ' + token 
         }
