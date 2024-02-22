@@ -12,7 +12,6 @@ import {
 import Note from "../components/Note";
 
 const SingleTicket = () => {
-  const API_URL = "https://supportdeskbackend-o50j.onrender.com";
   const { id } = useParams();
   const { sticket, isLoading, notes } = useSelector((state) => state.profile);
   const { user } = useSelector((state) => state.auth);
